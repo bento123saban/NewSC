@@ -297,41 +297,12 @@ header {
     width: 100%;
 }
 
-/* nav Button */
-.nav-button {
-    height: 20px;
-    width: 30px;
-    position: relative;
-}
-.nav-button span,
-.nav-button span::before,
-.nav-button span::after {
-    background: white; 
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 2px;         
-    margin-top: 10px;
-    transform: rotate(180deg);
-    transition: .5s ease-in-out;
-    left: 0;
-}
-.nav-button span::before {margin-top: -5px;}
-.nav-button span::after {margin-top: 5px;}
-.nav-button:hover span {
-    background: transparent;
-    width: 0;
-    left: 20px;
-}
-.nav-button:hover span::before {
-    margin-top: 0;
-    transform: rotate(45deg);
-}
-.nav-button:hover span::after {
-    transform: rotate(-45deg);
-    margin-top: 0;
-}
+/* nav button */
 
+
+
+
+/* main background */
 .main-bg {
     position: fixed;
 }
@@ -354,7 +325,7 @@ header {
   height: 100%;
 }
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
