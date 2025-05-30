@@ -32,6 +32,13 @@ body {
     background: radial-gradient(white, rgba(255,255,255, .4));
 }
 
+/* fixed */
+.fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 /* opacity set0 */
 .opacity-0 {opacity: 0 !important;}
 .opacity-30 {opacity: .33 !important;}
@@ -152,6 +159,7 @@ body {
 
 
 /* padding all set */
+.p-5 {padding: 5px !important;}
 .p-10 {padding: 10px !important;}
 .p-20 {padding: 20px !important;}
 .p-30 {padding: 30px !important;}
@@ -263,7 +271,7 @@ body {
 
 .color-default, .darkcyan, .clr-default, [data-color="default"] {color: darkcyan !important;}
 .default, [data-bg="default"] {
-    background: linear-gradient(45deg, var(--color6), var(--color7));
+    background: linear-gradient(45deg, darkcyan, #00BCBC) !important;
     color: white;
 }
 .br-default {border-color: #00BCBC !important;}
@@ -278,3 +286,97 @@ body {
 
 .bold {font-weight: bold;}
 .bolder {font-weight: bolder;}
+
+
+header {
+    z-index: 1000000 !important;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* nav Button */
+.nav-button {
+    height: 20px;
+    width: 30px;
+    position: relative;
+}
+.nav-button span,
+.nav-button span::before,
+.nav-button span::after {
+    background: white; 
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;         
+    margin-top: 10px;
+    transform: rotate(180deg);
+    transition: .5s ease-in-out;
+    left: 0;
+}
+.nav-button span::before {margin-top: -5px;}
+.nav-button span::after {margin-top: 5px;}
+.nav-button:hover span {
+    background: transparent;
+    width: 0;
+    left: 20px;
+}
+.nav-button:hover span::before {
+    margin-top: 0;
+    transform: rotate(45deg);
+}
+.nav-button:hover span::after {
+    transform: rotate(-45deg);
+    margin-top: 0;
+}
+
+.main-bg {
+    position: fixed;
+}
+.wave-box {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+}
+.wave-content {
+    height: 100px !important;
+    width: 150%;
+    overflow: hidden;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}

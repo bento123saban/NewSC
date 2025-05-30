@@ -9,20 +9,43 @@
         content="width=device-width, initial-scale=1">
     <title>Sales Control</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
-    <header>
-        <h3>Sales Control</h3>
+    <header class="flex-beetwen p-10 ">
+        <h3 class="p-0 m-0 clr-white">Sales Control</h3>
+        <div class="nav-button">
+            <span></span>
+        </div>
     </header>
     
+    <div class="main-bg fixed-top-left vh-100 vw-100">
+        <div class="wave-box default flex-end flex-column">
+            <div class="wave-content">
+                <!--Waves Container-->
+                <svg class="waves relative w-100 h-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="#efefef70" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="#efefef50" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="#efefef30" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#efefef" />
+                    </g>
+                </svg>
+            </div>
+            <!--Waves end-->
+        </div>
+    </div>
     
     
     
     
     
     
+    
+    <script src="main.js" type="text/javascript"></script>
 </body>
 
-</html>!
+</html>
